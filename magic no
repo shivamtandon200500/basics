@@ -16,7 +16,7 @@ n=n/10;
 }
 }
 if(s==1)
-System.out.println("***MAGIC **");
+System.out.println("***MAGIC no **");
 else
 System.out.println("***NOT MAGIC***");
 }
