@@ -1,0 +1,23 @@
+public class magic_number
+{
+public static void main(int n)// Enter a number
+{
+int d,s;
+s=n;
+while(s>9)
+{
+n=s;
+s=0;
+while(n>0)
+{
+d=n%10;
+s=s+d;
+n=n/10;
+}
+}
+if(s==1)
+System.out.println("***MAGIC **");
+else
+System.out.println("***NOT MAGIC***");
+}
+}
