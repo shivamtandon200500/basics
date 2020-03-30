@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_BUFFER_LENGTH 31 
+
+char userInitials(char *name)
+{
+    // Initialize the character array "name" and set to zero
+    // Determine the length of the string using strlen
+    // Print the first valid input of the string
+    // Loop through the string until a space is found
+   
+
+    for (int i = 0; i < MAX_BUFFER_LENGTH; i++)
+    {
+        name[i] = 0;
+    }
+
+    int length = strlen(name);
+
+    if (name[0] != ' ' && name[0] != '\0')
+    {
+        printf("%c\n", name[0]);
+    }
+
+    for (int i = 0; i < length; i++)
+    {
+        if (i + 1 < length && name[i + 1] != ' ')
+        {
+            printf("%c\n", name[i + 1]);
+        }
+    }
+}
+
+char main()
+{
+    char name[MAX_BUFFER_LENGTH] = " ";
+
+    printf("Enter your full name and I'll print your initials: ");
+    scanf_s("%[^\n]", &name, MAX_BUFFER_LENGTH);
+    printf("Your name is: %c\n", name);
+    printf("Your initials are: %c\n", userInitials(name));
+}
