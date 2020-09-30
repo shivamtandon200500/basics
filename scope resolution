@@ -1,6 +1,6 @@
 #include <iostream>  
 using namespace std;  
-
+//scope
 int my_var = 0;
 int main(void) {
    int my_var = 0;
